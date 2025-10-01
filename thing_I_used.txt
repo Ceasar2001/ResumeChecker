@@ -1,3 +1,5 @@
 https://docs.puter.com/getting-started/
  -> 
 
+react-dropzone = https://react-dropzone.js.org/
+ -> for resume uploader Simple React hook to create a HTML5-compliant drag'n'drop zone for files.
