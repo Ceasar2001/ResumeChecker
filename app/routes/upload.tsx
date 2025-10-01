@@ -12,7 +12,22 @@ const upload = () => {
         setFile(file);
     }
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {}
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget.closest('form');
+
+        if(!form) return;
+
+        const formData = new FormData(form);
+
+        const companyName = formData.get('company-name');
+        const jobTitle = formData.get('job-title');
+        const jobDescription = formData.get('job-description');
+
+        console.log({
+            companyName, jobTitle, jobDescription, file
+        })
+    }
 
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
